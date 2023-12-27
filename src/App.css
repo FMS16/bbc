@@ -1,38 +1,383 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 25px;
+  align-items: center;
+  height: 10vh;
+  box-shadow: 0 2px 15px rgb(0 110 210 / 15%);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header img {
+  width: 150px;
+}
+
+.nav--menu a {
+  margin: 10px;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.banner {
+  height: 90vh;
+  background-image: url("./assets/images/bannertwo.jpg");
+  background-size: 100%;
+  background-attachment: fixed;
+  width: 100%;
+  position: relative;
+}
+
+.banner::before {
+  content: "";
+  height: 90vh;
+  position: absolute;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+.banner-content {
+  position: absolute;
+  width: 60%;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.banner-content img {
+  width: 250px;
+}
+
+.banner-content h1 {
+  color: #ffbe00;
+  font-size: 48px;
+}
+
+.banner-content h2 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.banner-content h2 span svg {
+  margin-right: 5px;
+}
+
+.banner-content h2 span {
+  letter-spacing: 1px;
+}
+
+
+.order-now {
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #25D366;
+  display: flex;
+  align-items: center;
+  font-size: 28px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.order-now a {
+  color: #fff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container {
+  width: 1400px;
+  margin: auto;
+}
+
+.idea, .restaurants, .who-we-are, .difference, .footer{
+  padding: 80px;
+}
+
+.section-whoweare {
+  text-align: center;
+}
+
+.section-title {
+  font-size: 30px;
+  text-align: center;
+  margin: 15px 0;
+  color: #451a1c;
+}
+
+.section-whoweare h2 {
+  font-size: 20px;
+  color: #ffbe00;
+}
+
+.section-whoweare p {
+  margin-top: 30px;
+  color: #451a1c;
+  font-weight: bold;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 23px;
+}
+
+.section-restaurants {
+  display: flex;
+  justify-content: space-between;
+}
+
+.who-we-are, .restaurants, .idea, .difference{
+  padding-bottom: 150px;
+  background-color: beige;
+  clip-path: polygon(0 0,100% 0,100% calc(100% - 50px),50% 100%,0 calc(100% - 50px));
+  min-height: 60vh;
+}
+
+.item-restaurant {
+  width: 33%;
+  margin: 15px;
+}
+
+.item-restaurant img {
+  width: 100%;
+  border-radius: 10px 2px 10px 2px;
+}
+
+.item-restaurant h1 {
+  text-align: center;
+  font-size: 16px;
+  color: #451a1c;
+  font-weight: bold;
+}
+
+.item-restaurant h2 {
+  color: #451a1c;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.banner-attached::before {
+  content: "";
+  height: 450px;
+  position: absolute;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+.banner-attached{
+  clip-path: polygon(0 0,50% 50px,100% 0,100% 100%,0 100%);
+  margin-top: -50px;
+}
+
+.nobottom {
+  margin-top: -200px;
+}
+
+.notop {
+  margin-top: -50px;
+}
+
+.section-idea {
+  display: flex;
+}
+
+.section-idea .idea-text {
+  width: 60%;
+  padding: 15px;
+  text-align: justify;
+}
+
+.section-idea img {
+  width: 40%;
+  padding: 15px;
+  height: 350px;
+  object-fit: cover;
+}
+
+.notop {
+  margin-top: -150px;
+}
+
+.section-difference{
+  display: flex;
+  justify-content: space-between;
+}
+
+.difference-item{
+  width: 33%;
+  margin: 15px;
+}
+
+.difference-item img{
+  width: 100%;
+  border-radius: 2px 10px 2px 10px;
+}
+
+.difference-text h1{
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.difference-text{
+  color: #451a1c;
+  font-size: 14px;
+  text-align: justify;
+}
+
+.difference-item ul{
+  list-style-position: inside;
+}
+
+.difference-text ul li{
+  padding: 5px;
+}
+
+.footer{
+  clip-path: polygon(0 0,50% 50px,100% 0,100% 100%,0 100%);
+  margin-top: -50px;
+  background-color: #273036;
+}
+
+.footer{
+  color: #fff;
+  font-weight: normal;
+}
+
+.footer .section-title{
+  color: #fff;
+}
+
+.footer-container{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-info{
+  width: 49%;
+}
+
+.form{
+  width: 49%;
+}
+
+.footer-info ul{
+  list-style-position: inside;
+  list-style: none;
+  display: flex;
+  margin-top: 15px;
+}
+
+.footer-info ul li{
+  margin-right: 10px;
+}
+
+.footer-info ul li a{
+  width: 35px;
+  height: 35px;
+  background-color: beige;
+  color: #273036;
+  text-decoration: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.form{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-item{
+  width: 49%;
+}
+
+.form input, .form textarea{
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.form .input-text{
+  padding: 7.5px;
+  border: none;
+  border-radius: 2.5px;
+  border-bottom: 2px solid #fff;
+}
+
+.input-text:focus{
+  outline: none;
+  border-bottom: 2px solid #ef4303
+}
+
+.form .input-textarea{
+  padding: 8px;
+  border: none;
+  border-radius: 2.5px;
+  min-height: 100px;
+  max-height: 150px;
+  min-width: 100%;
+  border-bottom: 2px solid #fff;
+}
+
+.input-textarea:focus{
+  outline: none;
+  border-bottom: 2px solid #ef4303
+}
+
+.input-submit{
+  width: 150px !important;
+  display: block;
+  right: 0;
+  position: relative;
+  background-color: #ef4303;
+  border: none;
+  padding: 8px;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.footer-last{
+  width: 100%;
+  margin-top: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-last img{
+  width: 75px;
+}
+
+.footer-last p{
+  margin-top: 15px;
+}
+
+.footer-last a{
+  color: #ef4303;
+  text-decoration: none;
 }

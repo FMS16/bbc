@@ -1,23 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import Banner from './components/Banner';
+import Header from './components/Header';
+import OrderNow from './components/OrderNow';
+import Restaurants from './components/Restaurants';
+import WhoWeAre from './components/WhoWeAre';
+import img from "./assets/images/bannerthree.jpg"
+import imgTwo from "./assets/images/banner.jpg"
+import imgThree from "./assets/images/bannerfour.jpg"
+import BannerBetween from './components/BannerBetween';
+import Idea from './components/Idea';
+import Difference from './components/Difference';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Banner />
+      <WhoWeAre />
+      <BannerBetween img={imgTwo} />
+      <Restaurants />
+      <BannerBetween img={img} />
+      <Idea />
+      <BannerBetween img={imgThree} />
+      <Difference />
+      <Footer />
+      <OrderNow />
     </div>
   );
 }
