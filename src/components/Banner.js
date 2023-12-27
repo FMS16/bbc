@@ -8,7 +8,7 @@ const Banner = () => {
     return (
         <div className='banner'>
             <div className='banner-content'>
-                {/* <h1>Burger & Sushi</h1> */}
+                <h1>BURGER & SUSHI</h1>
                 {/*<h2>Ordená ahora por Whatsapp <span><FontAwesomeIcon icon={faMobile}></FontAwesomeIcon>098333222</span></h2> */}
                 <img src={logoBlanco} />
             </div>

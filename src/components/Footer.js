@@ -29,7 +29,7 @@ const Footer = () => {
                         <input type='text' className='input-text' placeholder='Zona de preferencia' />
                     </div>
                     <textarea className='input-textarea' placeholder='Mensaje'></textarea>
-                    <FontAwesomeIcon icon={faFeather}></FontAwesomeIcon>
+                    <FontAwesomeIcon className='feather' icon={faFeather}></FontAwesomeIcon>
                     <input type='submit' className='input-submit' />
                 </form>
                 <div className='footer-last'>

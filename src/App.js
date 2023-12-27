@@ -11,8 +11,10 @@ import BannerBetween from './components/BannerBetween';
 import Idea from './components/Idea';
 import Difference from './components/Difference';
 import Footer from './components/Footer';
+import imgS from "./assets/images/bannerfive.jpg"
 
 function App() {
+  const windowWidth = window.innerWidth;
   return (
     <div className="App">
       <Header />
@@ -20,7 +22,7 @@ function App() {
       <WhoWeAre />
       <BannerBetween img={imgTwo} />
       <Restaurants />
-      <BannerBetween img={img} />
+      {windowWidth <= 600 ? <BannerBetween img={imgS} /> : <BannerBetween img={img} />}
       <Idea />
       <BannerBetween img={imgThree} />
       <Difference />
