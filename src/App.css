@@ -496,10 +496,10 @@ body {
 
   .banner {
     background-repeat: no-repeat;
-    height: 90vh;
+    height: 85vh;
     margin-top: 10vh;
     background-image: url("./assets/images/bannerthree.jpg");
-    background-size: cover;
+    background-size: contain;
     object-fit: cover;
     background-position: center;
   }

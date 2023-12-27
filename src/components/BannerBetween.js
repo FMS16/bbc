@@ -20,7 +20,7 @@ const BannerBetween = ({ img }) => {
   const mobileStyles = {
     backgroundRepeat: 'no-repeat',
     backgroundImage: `url(${img})`,
-    backgroundSize: 'cover',
+    backgroundSize: 'contain',
     objectFit: 'cover',
     backgroundPosition: 'center',
   };
