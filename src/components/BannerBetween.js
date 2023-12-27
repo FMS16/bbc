@@ -19,10 +19,11 @@ const BannerBetween = ({ img }) => {
   // Define estilos adicionales para dispositivos móviles
   const mobileStyles = {
     backgroundRepeat: 'no-repeat',
-    backgroundImage: `url(${img})`,
-    backgroundSize: 'contain',
+  /*height: 90vh; */
+  backgroundImage: `url(${img})`,
+    backgroundSize: 'cover',
     objectFit: 'cover',
-    backgroundPosition: 'center',
+    backgroundPosition: 'center'
   };
 
   // Combina los estilos base y los estilos adicionales según el tamaño de la pantalla
